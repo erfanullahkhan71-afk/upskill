@@ -1,17 +1,17 @@
-import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 
-// Import Swiper styles
+// Swiper styles
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
-// Import required modules
+// Modules
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 
-function CardeSecond() {
+function Courses() {
   return (
-    <div className="py-10  bg-blue-100">
+    <div>
+       <div className="py-10 bg-blue-100">
       {/* Title */}
       <h1 className="text-center text-2xl md:text-3xl font-semibold mb-8">
         Transforming Skills for Tomorrow&apos;s Challenges
@@ -21,18 +21,16 @@ function CardeSecond() {
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         spaceBetween={30}
-        slidesPerView={3}
         navigation
         pagination={{ clickable: true }}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         breakpoints={{
-          320: { slidesPerView: 1 }, // mobile
-          640: { slidesPerView: 2 }, // tablet
-          1024: { slidesPerView: 3 }, // desktop
+          320: { slidesPerView: 1 },
+          640: { slidesPerView: 2 },
+          1024: { slidesPerView: 3 },
         }}
         className="px-6"
       >
-        {/* Slides */}
         {[...Array(6)].map((_, index) => (
           <SwiperSlide key={index}>
             <div className="bg-white rounded-xl shadow hover:shadow-lg transition p-4">
@@ -69,7 +67,13 @@ function CardeSecond() {
         </button>
       </div>
     </div>
-  );
+    </div>
+  )
 }
 
-export default CardeSecond;
+export default Courses
+
+
+
+
+
